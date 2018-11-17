@@ -1,18 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeserviceService } from './employeeservice.service';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule ,routingComponents} from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    EmployeeListComponent,
+    EmployeeDetailsComponent,
+    routingComponents,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [EmployeeserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
