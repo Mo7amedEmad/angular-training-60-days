@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule ,routingComponents} from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
 
 
 
@@ -21,7 +22,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     EmployeeListComponent,
     EmployeeDetailsComponent,
     routingComponents,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DepartmentDetailsComponent
   ],
   imports: [
     BrowserModule,
